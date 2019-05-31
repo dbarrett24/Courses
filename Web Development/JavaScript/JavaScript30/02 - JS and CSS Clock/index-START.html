@@ -15,16 +15,16 @@
       </div>
     </div>
 
+    <div class="overlay"></div>
 
   <style>
     html {
-      background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+      background: #018DED url(https://images.unsplash.com/photo-1496033604106-04799291ee86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80&blur=50);
       background-size: cover;
       font-family: 'helvetica neue';
       text-align: center;
       font-size: 10px;
     }
-
     body {
       margin: 0;
       font-size: 2rem;
@@ -32,6 +32,17 @@
       flex: 1;
       min-height: 100vh;
       align-items: center;
+    }
+
+    .overlay{
+      z-index: -1;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0.7;
+      background-size: cover;
+      background: rgb(0,0,0);
+      background: radial-gradient(circle, rgba(0,0,0,0.5578606442577031) 0%, rgba(246,49,49,1) 37%, rgba(46,0,255,1) 100%);
     }
 
     .clock {
@@ -62,13 +73,51 @@
       background: black;
       position: absolute;
       top: 50%;
+      transform: rotate(90deg);
+      transform-origin: 100%;
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
     }
 
   </style>
-
   <script>
+    const secondHand = document.querySelector('.second-hand');
+    const minuteHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+    function setDate(){
+      const now = new Date();
+
+      const seconds = now.getSeconds();
+      const secondsDegrees = ((seconds / 60) * 360) + 90;
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    
+      if(secondsDegrees == 450){
+        secondHand.style.transition = "all 0s";
+      }
+      
+      const minutes = now.getMinutes();
+      const minutesDegrees = ((minutes / 60) * 360) + ((seconds/60)*6) + 90;
+      minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+      
+      const hours = now.getHours();
+      const hoursDegrees = ((hours / 60) * 360) + ((minutes/60)*30)+ 90;
+      hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+      
+      //fix for jumping back to 90 degrees issue
+      [secondHand,minuteHand,hourHand].forEach(element => {
+        if(seconds === 0){
+          element.style.transition = 'none';
+        }else{
+          element.style.transition = null;
+        }
+      });
+    }
 
 
+    setInterval(setDate, 1000);
+
+    setDate();
   </script>
 </body>
 </html>

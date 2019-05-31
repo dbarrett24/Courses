@@ -66,7 +66,7 @@
     //const audio = document.querySelector(audioKey);
     
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //using template strings
-    console.log(audio);
+    //console.log(audio);
     
     if(!audio) return; //stop the function from running.
     audio.currentTime = 0; //rewind to the start of the audio track.
@@ -75,7 +75,7 @@
   }
   
   function removeTransition(e){
-    if(e.propertyName !== 'transform') return; //skip the event if it's not a transform)
+    if(e.propertyName !== 'transform') return; //skip the event if it's not a transform property in css)
     this.classList.remove('playing');
   }
   const keys = document.querySelectorAll('.key');
