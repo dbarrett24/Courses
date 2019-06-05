@@ -91,13 +91,9 @@
       const seconds = now.getSeconds();
       const secondsDegrees = ((seconds / 60) * 360) + 90;
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-    
-      if(secondsDegrees == 450){
-        secondHand.style.transition = "all 0s";
-      }
       
       const minutes = now.getMinutes();
-      const minutesDegrees = ((minutes / 60) * 360) + ((seconds/60)*6) + 90;
+      const minutesDegrees = ((minutes / 60) * 360) + ((seconds/60)*6) + 90
       minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
       
       const hours = now.getHours();
