@@ -16,12 +16,32 @@
 
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" value="#ffc600">
+
+    <!-- label for, data-sizing, min, max, type= range-->
+    <label for="border-radius">Border Radius</label> 
+    <input id="border-radius" type="range" name="borderRadius" min="0" max="50" value="0" data-sizing="px">
   </div>
 
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+    :root{
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+      --borderRadius: 0px;
+    }
 
+    img{
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+      border-radius: var(--borderRadius);
+    }
+
+    .hl{
+      color: var(--base);
+    }
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -45,6 +65,18 @@
   </style>
 
   <script>
+    const inputs = document.querySelectorAll(".controls input");
+
+    function handleUpdate(){
+      //console.log(this.value);
+      //console.log(this.dataset.sizing);
+      const suffix = this.dataset.sizing || ''; //or NOTHING for the hexcode input as it doesn't have a data- attribute.
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+
+    }
+
+    inputs.forEach(input => input.addEventListener("change", handleUpdate)); //when the value is officially changed, the function is triggered.
+    inputs.forEach(input => input.addEventListener("mousemove", handleUpdate)); //when hovering over the input element, this triggers the function.
   </script>
 
 </body>
