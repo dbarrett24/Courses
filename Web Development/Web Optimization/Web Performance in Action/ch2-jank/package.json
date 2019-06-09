@@ -1,0 +1,23 @@
+{
+  "name": "webopt-jank",
+  "version": "1.0.0",
+  "description": "The jank remediation exercise for the book Web Optimization in Action.",
+  "main": "http.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malchata/webopt-jank.git"
+  },
+  "author": "Jeremy Wagner <jeremy.l.wagner@gmail.com> (http://jeremywagner.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malchata/webopt-jank/issues"
+  },
+  "homepage": "https://github.com/malchata/webopt-jank#readme",
+  "dependencies": {
+    "compression": "^1.6.1",
+    "express": "^4.13.4"
+  }
+}
