@@ -7,9 +7,7 @@ $(function(){
 
 		var topPlacement = $(window).width() > 500 ? "10%" : 0;
 
-		$(".modal").animate({
-			"top": topPlacement
-		}, 500);
+		$(".modal").addClass("open");
 	}
 
 	function closeModal(){
@@ -17,9 +15,7 @@ $(function(){
 		clearFields();
 
 		// Hide Modal
-		$(".modal").hide(0, function(){
-			$(".modal").removeAttr("style");
-		});
+		$(".modal").removeClass("open");
 
 		// Hide Page Fade
 		$(".pageFade").hide();
@@ -37,9 +33,9 @@ $(function(){
 		$("#schedule").click(function(){
 			// Change body visibility
 			$("body").addClass("locked");
-
 			// Open Modal
 			openModal();
+			console.timeStamp("Modal open");
 		});
 
 		// Modal close via click

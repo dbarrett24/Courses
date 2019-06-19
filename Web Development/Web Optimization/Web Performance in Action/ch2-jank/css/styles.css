@@ -558,7 +558,8 @@ div.modal,
 div.statusModal,
 div.loader{
 	position: absolute;
-	top: -150%;
+	transform: translateY(-150%);
+	transition: transform 0.5s;
 	left: 50%;
 	margin-top: 0;
 	margin-right: 0;
@@ -575,6 +576,9 @@ div.loader{
 	border-bottom-right-radius: 12px;
 	border-bottom-left-radius: 12px;
 	background-color: #080808;
+}
+div.modal.open{
+	transform: translateY(10%);
 }
 
 a#okayButton{
@@ -1033,7 +1037,9 @@ div.rightLocations h2{
 	div.genericContent div.listContainer ul.genericList li{
 		flex-basis: 100%;
 	}
-
+	div.modal.open{
+		transform: translateY(0);
+	}
 	div.rightLocations div.listContainer ul{
 		flex-basis: 50%;
 	}
