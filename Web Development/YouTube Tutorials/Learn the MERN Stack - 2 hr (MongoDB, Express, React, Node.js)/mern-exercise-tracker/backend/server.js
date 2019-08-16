@@ -18,6 +18,8 @@ connection.once('open', ()=>{
     console.log("MongoDB database connection established successfully");
 });
 
+//ROUTING//
+//tells server to use these files for routing to /exercises or /users
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 

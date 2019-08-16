@@ -1,25 +1,26 @@
-import React, { Component} from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom'; //allows us to link to different routes like a ui-sref in Angular.js
 
 export default class Navbar extends Component {
+    
     render() {
-        return (
+        return(
             <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-                <Link to="/" className="navbar-brand">ExcerTracker</Link>
+                <Link to="/" className="navbar-brand">ExerTracker</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="navbar-item">
                             <Link to="/" className="nav-link">Exercises</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/" className="nav-link">Create Exercise Log</Link>
+                            <Link to="/create" className="nav-link">Create Exercise Log</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/" className="nav-link">Create User</Link>
+                            <Link to="/user" className="nav-link">Create User</Link>
                         </li>
                     </ul>
                 </div>
             </nav>
-        )
+        );
     }
 }
