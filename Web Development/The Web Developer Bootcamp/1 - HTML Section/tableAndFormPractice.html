@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First Gen Pokemon Chart</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Evolves Into</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img width="100" src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png"</td>
+                <td>Bulbasaur</td>
+                <td>Grass/Poison</td>
+                <td><a href="http://pokemon.wikia.com/wiki/Ivysaur">IvySaur</a></td>
+            </tr>
+            <tr>
+                <td><img width="100" src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png"</td>
+                <td>Charmander</td>
+                <td>Fire</td>
+                <td><a href="http://pokemon.wikia.com/wiki/Charmeleon">Charmeleon</a></td>
+            </tr>
+            <tr>
+                <td><img width="100" src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png"</td>
+                <td>Squirtle</td>
+                <td>Water</td>
+                <td><a href="http://pokemon.wikia.com/wiki/Wartortle">Wartortle</a></td>
+            </tr>
+            <tr>
+                <td><img width="100" src="https://vignette.wikia.nocookie.net/pokemon/images/0/0d/025Pikachu.png/"</td>
+                <td>Pikachu</td>
+                <td>Lightning</td>
+                <td><a href="https://pokemon.fandom.com/wiki/Raichu">Raichu</a></td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+            <!-- FORM PRACTICE -->
+<!-- ACTION - where the form sends data to -->
+<!-- METHOD - what HTTP method (get/post) -->
+
+<!-- Labels are captions for form fields - help with accessibility and screenreaders -->
+<!-- Form is a block level element -->
+<!-- Adding the "required" attribute prevents the form for being sent until the inputs have information -->
+<!-- The "name" attribute tells the browser how to store the input information when it is sent in an HTTP request. -->
+
+<form action="http://wikipedia.com" method="GET">
+    <div>
+        <label>
+            Username: 
+            <input name="username" type="text" placeholder="username" required>
+        </label>
+        <label>
+            Password: 
+            <input name="password" type="password" placeholder="password" required>
+        </label>
+    </div>
+    <div>
+        alternate label method:
+        <label for="username">
+            Username: 
+        </label>
+        <input id="username" name="username" type="text" placeholder="username" required>
+        <label for="password">
+            Password: 
+        </label>
+        <input id="password" name="password" type="password" placeholder="password" required>
+    </div>
+    
+    <div>
+        Checkbox
+        <input type="checkbox">
+    </div>
+    
+    <input type="date">
+    <input type="color">
+    <input type="file" multiple>
+    <input type="email" placeholder="email">
+    <input type="search">
+    <input type="number">
+    
+    <!-- This Button above is the same as the below -->
+    <input type="submit">
+</form>
+
+
+<!-- IF a Button is at the END of a FORM, that button will actually submit the form the same as an input type="submit" -->
+<!-- value tells the browser what value to store, for radio buttons this is important, else the value "on" will be sent-->
+            <form>
+                <div>
+                    <p>Do you prefer cats or dogs</p>
+                    <label for="dogs">Dogs:</label>
+                    <input name="petChoice" id="dogs" type="radio" value="DOGS">
+                    <label for="cats">Cats:</label>
+                    <input name="petChoice" id="cats" type="radio" value="CATS">
+                </div>
+
+                <!-- Single Select Picklist using the "Select and Option tags" -->
+                <!-- You can use Value on the option tags to store values that aren't the same as what is within the Option tag. -->
+                <div>
+                    <p>What is your favorite color?</p>
+                    <select name="color" multiple>
+                        <option>Red</option>
+                        <option>Orange</option>
+                        <option>Yellow</option>
+                    </select>
+                </div>
+
+                <!-- you can specify how big a text area is by using "rows" and "columns" attributes -->
+                <!-- maxlength limits the # of characters allowed-->
+                <div>
+                   <textarea name="paragraph" rows="10" cols="50" maxlength="15"></textarea>
+                </div>
+                <button>Submit</button>
+            </form>
+        </body>
+</html>
+
+<!-- OTHER NOTES: -->
+
+<!-- attibutes: -->
+<!-- MULTIPLE -> adding this means teh user can select more than one value from a list, you can use this with files, select picklists, etc. -->

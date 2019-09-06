@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Practice</title>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <form>
+        <label>
+            First Name:
+            <input name="First" type="text" placeholder="Joseph" required>
+        </label>
+        <label>
+            Last Name:
+            <input name="Last" type="text" placeholder="Smith" required>
+        </label>
+
+        <div>
+            <label>
+                Male
+                <input name="gender" type="radio" value="male">
+            </label>
+            <label>
+                Female
+                <input name="gender" type="radio" value="female">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Email:
+                <input name="username" type="email" placeholder="Email Address" required>
+            </label>
+            <label>
+                Password:
+                <input name="password" type="password" pattern=".{5,10}" title="Password must be between 5 to 10 characters" required>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Birthday:
+                <select name="month">
+                    <option>Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                </select>
+                <select name="day">
+                    <option>Day</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <select name="year">
+                    <option>Year</option>
+                    <option>1999</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                </select>
+                
+            </label>
+        </div>
+
+        <div>
+            <label>
+                I agree to the terms and conditions
+                <input name="agreed" type="checkbox" required> 
+            </label>
+        </div>
+
+
+
+
+        <input type="submit" value="Send to Hackers">
+    </form>
+    
+</body>
+</html>
