@@ -1,0 +1,18 @@
+table{
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+td{
+    width:33%;
+    height:33%;
+}
+tr:nth-of-type(2) td{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+td:nth-of-type(2){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}

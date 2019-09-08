@@ -1,0 +1,15 @@
+p{
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: underline;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: right;
+    text-decoration: line-through;
+}
+span{
+    font-size: 2.0em; 
+}
