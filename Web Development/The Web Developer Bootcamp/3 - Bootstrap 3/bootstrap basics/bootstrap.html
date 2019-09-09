@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Basics</title>
+    <link href="./bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <!-- Jumbotrons are like HERO UNITS (HERO SECTIONS at the top of the page) -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>This is a Jumbotron</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate similique hic nobis
+                distinctio. Suscipit nulla magnam doloribus</p>
+            <button class="btn btn-success btn-lg">Click Me</button>
+        </div>
+
+        <h1>Bootstrap Basics</h1>
+
+        <button class="btn btn-success btn-sm">Click me</button>
+        <button class="btn btn-danger btn-sm">Click me</button>
+        <button class="btn btn-success btn-sm" disabled="disabled">Click me</button>
+        <a class="btn btn-info btn-lg" href="http://www.getbootstrap.com">Bootstrap Docs</a>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" class="btn btn-default" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        <!-- INLINE FORM -->
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+            </div>
+            <button type="submit" class="btn btn-default">Send invitation</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
