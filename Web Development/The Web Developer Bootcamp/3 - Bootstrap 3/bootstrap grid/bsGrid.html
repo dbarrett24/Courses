@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Grid</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap.css">
+
+    <style type="text/css">
+        .blue {
+            background: skyblue;
+            border: 0.5px solid navy;
+            text-align: center;
+        }
+        .orange {
+            background: orange;
+            border: 1px dashed red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================================================
+OBJECTIVES
+1. Understand the Purpose of the Grid System
+2. Understand the 4 different sizes
+3. Write Nested Grids
+=================================================== -->
+
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-2 blue">COL LG 2</div>
+            <div class="col-lg-8 blue">COL LG 8</div>
+            <div class="col-lg-2 blue">COL LG 2</div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-6 blue">COL LG 6</div>
+            <div class="col-lg-6 blue">COL LG 6</div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-4 blue">COL LG 4</div>
+            <div class="col-lg-4 blue">COL LG 4</div>
+            <div class="col-lg-4 blue">COL LG 4</div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+            <div class="col-lg-1 col-md-2 blue">COL LG 1</div>
+        </div>
+        <div class="row ">
+            <div class="col-md-3 col-sm-6 blue">
+                <div class="row">
+                    <div class="col-lg-6 orange">First Half</div>
+                    <div class="col-lg-6 orange">Second Half</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 blue">Tour Date</div>
+            <div class="col-md-3 col-sm-6 blue">Tour Date</div>
+            <div class="col-md-3 col-sm-6 blue">
+                <div class="row">
+                    <div class="col-lg-2 orange">nested</div>
+                    <div class="col-lg-2 orange">nested</div>
+                    <div class="col-lg-2 orange">nested</div>
+                    <div class="col-lg-2 orange">nested</div>
+                    <div class="col-lg-2 orange">nested</div>
+                    <div class="col-lg-2 orange">nested</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
