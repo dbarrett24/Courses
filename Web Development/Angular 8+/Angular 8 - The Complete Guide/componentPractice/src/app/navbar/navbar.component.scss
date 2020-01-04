@@ -1,0 +1,83 @@
+@import '../../styles.scss';
+
+.nav{
+    height: 100px;
+    width: 100%;
+    background-color: $brand-black;
+    position: absolute;
+    bottom: 0;
+    @include flex-space-between;
+    padding: 10px 20px;
+    z-index: 1001;
+    transform: scale(1);
+    transition: transform 0.5s;
+    .nav-left{
+        height: 100%;
+        width: 100%;
+        @include flex-left-center;
+        .nav-logo {
+            height: 78px;
+        }
+       
+    }
+    .nav-center{
+        height: 100%;
+        width: 100%;
+        @include flex-center-center;
+        .nav-logo-mid {
+            height: 60px;
+        }
+        .nav-list{
+            @include flex-center-center;
+
+            .nav-links{
+                padding: $square-padding;
+                font-size: $font-size-navbar;
+                font-weight: $app-font-weight-bold;
+                border-radius: 50px;
+            }
+        }
+    }
+    .nav-logo-left {
+        height: 60px;
+    }
+    .nav-right{
+        height: 100%;
+        width: 100%;
+        @include flex-right-center;
+
+    //should this go in BUTTONS?
+            .nav-download{
+                position: relative;
+                height: 43px;
+                white-space: nowrap;
+            }
+            .sidebar-ham{
+                font-size: 38px;
+            }
+        
+    }
+}
+
+.is-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // background: $brand-charcoal;
+    // background: url('../images/backgrounds/x-color-bg.jpg') no-repeat center center;
+    // background-size: cover;
+    background: url('~/assets/backgrounds/pw_maze_black_2X.png') left top repeat;
+    transition: all 0.75s;
+    
+}
+// .is-absolute{
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     z-index: 1001;
+// }
+
+
+
+
+
