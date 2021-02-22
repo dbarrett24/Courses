@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { themes } from "../styles/ColorStyles"
+import {H1, MediumText} from "../styles/TextStyles"
 
 const Wrapper = styled.div`
   background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
@@ -15,12 +16,10 @@ const TextWrapper = styled.div`
   display: grid;
   gap: 30px;
 `
-const Title = styled.h1`
-  font-weight: 600;
-  font-size: 60px;
-  color: white;
+const Title = styled(H1)`
+  color: ${themes.dark.text1};
 `
-const Description = styled.p`
+const Description = styled(MediumText)`
   font-size: 17px;
   line-height: 130%;
 `
