@@ -5,7 +5,7 @@ import { Caption2, SmallText } from "../styles/TextStyles"
 
 function PurchaseButton({ title, subtitle }) {
   return (
-    <Link to="/page-2">
+    <Link to="/coming-soon">
       <Wrapper>
         <IconWrapper>
           <Icon src="/images/icons/credit.svg" className="icon" />
