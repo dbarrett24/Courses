@@ -18,6 +18,6 @@
   "homepage": "https://github.com/malchata/webopt-css#readme",
   "dependencies": {
     "compression": "^1.6.1",
-    "express": "^4.13.4"
+    "express": "^4.18.2"
   }
 }
